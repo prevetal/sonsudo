@@ -1,0 +1,969 @@
+@media print, (max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title: 28px;
+    }
+
+
+    html.custom_scroll ::-webkit-scrollbar
+    {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    .content_flex .content
+    {
+        width: 100%;
+    }
+
+
+    .tablet_hide
+    {
+        display: none !important;
+    }
+
+
+
+    /*--------------
+        ButtonUp
+    --------------*/
+    .buttonUp
+    {
+        right: 20px;
+        bottom: 20px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion .item .head,
+    .accordion .item .data
+    {
+        padding-right: 44px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    .mob_header
+    {
+        display: block;
+    }
+
+
+    header
+    {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+
+        width: 310px;
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        margin: 0;
+
+        transition: transform .3s linear;
+        transform: translateX(-100%);
+
+        background: #fff;
+    }
+
+    header.show
+    {
+        transform: translateX(0);
+    }
+
+
+    header .mob_scroll
+    {
+        display: flex;
+        overflow: auto;
+
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        padding: 0;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    header .mob_scroll > *
+    {
+        width: 100%;
+    }
+
+    header .cont
+    {
+        padding: 0;
+    }
+
+
+    header .info
+    {
+        padding: 0;
+
+        order: 2;
+    }
+
+
+    header .logo,
+    header .contacts,
+    header .sep,
+    header .btns,
+    header .data .row + .row,
+    header .search
+    {
+        display: none;
+    }
+
+
+    header .data
+    {
+        display: block;
+
+        width: 100%;
+        margin: 0;
+    }
+
+    header .data .row + .row
+    {
+        margin: 0;
+    }
+
+
+    header .links
+    {
+        line-height: 21px;
+
+        display: block;
+
+        width: 100%;
+        padding: 16px 20px;
+
+        border-radius: 0;
+    }
+
+    header .links > * + *
+    {
+        margin-top: 8px;
+        margin-left: 0;
+    }
+
+
+    header .catalog
+    {
+        width: 100%;
+        margin: 0;
+    }
+
+    header .catalog .btn
+    {
+        width: 100%;
+        min-height: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    header .catalog .mini_modal
+    {
+        position: relative;
+
+        display: none;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    header .catalog .mini_modal.active
+    {
+        display: block;
+    }
+
+    header .catalog .mini_modal .row
+    {
+        display: block;
+
+        margin-bottom: 0;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    header .catalog .mini_modal .row > *
+    {
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    header .catalog .mini_modal .row > * + *
+    {
+        margin-top: 28px;
+    }
+
+    header .catalog .mini_modal .title
+    {
+        margin-bottom: 8px;
+    }
+
+    header .catalog .mini_modal .bottom_links .row
+    {
+        margin: 0;
+        padding: 20px;
+    }
+
+    header .catalog .mini_modal .bottom_links .row > *
+    {
+        margin: 0;
+    }
+
+    header .catalog .mini_modal .bottom_links .row > * + *
+    {
+        margin-top: 8px;
+    }
+
+
+    header .menu
+    {
+        display: block;
+
+        margin: 0;
+        padding: 16px 20px;
+    }
+
+    header .menu .item + .item
+    {
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+    header .menu .item > a
+    {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+
+    aside .mob_filter_btn
+    {
+        display: block;
+    }
+
+    aside .filter form
+    {
+        display: none;
+
+        margin-top: 12px;
+        padding: 24px;
+    }
+
+
+    aside .banner
+    {
+        display: none;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .breadcrumbs
+    {
+        line-height: 17px;
+    }
+
+    .breadcrumbs .sep
+    {
+        margin: 0 12px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        margin-bottom: 28px;
+    }
+
+    .block_head.pad_right
+    {
+        padding-right: 120px;
+    }
+
+    .block_head .desc
+    {
+        line-height: 20px;
+
+        margin-top: 16px;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .cols
+    {
+        margin-left: -32px;
+    }
+
+    .form .cols .col
+    {
+        width: calc(50% - 32px);
+        margin-left: 32px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        line-height: 20px;
+    }
+
+
+    .text_block h2
+    {
+        font-size: 27px;
+        line-height: 31px;
+    }
+
+    .text_block h3
+    {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .text_block h4
+    {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .text_block h5
+    {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+
+    .text_block figure img
+    {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .text_block figure figcaption
+    {
+        width: 100%;
+        margin-top: 24px;
+
+        order: 2;
+    }
+
+
+    .text_block .table_wrap
+    {
+        width: calc(100% + 48px);
+        max-width: calc(100% + 48px);
+        margin-right: -24px;
+        margin-left: -24px;
+
+        border-radius: 0;
+    }
+
+    .text_block table
+    {
+        width: 1000px;
+    }
+
+
+    .text_block ul li:before
+    {
+        top: 7px;
+    }
+
+
+    .text_block figure img.mini
+    {
+        width: calc(33.333% - 10px);
+    }
+
+    .text_block figure img.mini + figcaption
+    {
+        width: calc(66.666% - 14px);
+        margin: 0;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .slide .img
+    {
+        padding-bottom: 43.25%;
+    }
+
+
+
+    /*------------
+        Sports
+    ------------*/
+    .sports .row
+    {
+        margin-bottom: -12px;
+        margin-left: -12px;
+    }
+
+    .sports .row > *
+    {
+        width: calc(33.333% - 12px);
+        margin-bottom: 12px;
+        margin-left: 12px;
+    }
+
+
+    .sports .sport .name
+    {
+        font-size: 18px;
+
+        padding: 20px;
+    }
+
+    .sports .sport .name b
+    {
+        font-size: 36px;
+    }
+
+
+
+    /*---------------
+        Recommend
+    ---------------*/
+    .recommend .swiper-button-next,
+    .recommend .swiper-button-prev
+    {
+        opacity: 1;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+
+
+    /*-----------------
+        Action form
+    -----------------*/
+    .action_form .desc
+    {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .images
+    {
+        width: 100%;
+    }
+
+
+    .product_info .data
+    {
+        width: 100%;
+        margin-top: -1px;
+        margin-left: 0;
+    }
+
+    .product_info .data .section
+    {
+        padding: 16px 20px;
+    }
+
+
+
+    /*--------------------
+        Prod. features
+    --------------------*/
+    .prod_features .item
+    {
+        padding: 10px 16px;
+    }
+
+    .prod_features .item .name
+    {
+        width: 212px;
+    }
+
+    .prod_features .item .val
+    {
+        width: calc(100% - 212px);
+    }
+
+
+
+    /*---------------
+        Cart info
+    ---------------*/
+    .cart_info table thead
+    {
+        display: none;
+    }
+
+
+    .cart_info table tbody tr
+    {
+        position: relative;
+
+        display: flex;
+
+        min-height: 120px;
+        padding: 20px 20px 20px 120px;
+
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .cart_info table tbody tr + tr
+    {
+        border-top: 1px solid #dfdfdf;
+    }
+
+
+    .cart_info table tbody td
+    {
+        display: block;
+
+        padding: 0;
+
+        border: none;
+    }
+
+    .cart_info table tbody td.status:before,
+    .cart_info table tbody td.minimum:before,
+    .cart_info table tbody td.amount:before,
+    .cart_info table tbody td.price:before
+    {
+        color: currentColor;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 12px;
+
+        display: block;
+
+        width: 100%;
+        margin-bottom: 8px;
+
+        content: attr(data-column);
+        text-align: left;
+        letter-spacing: 0;
+        text-transform: none;
+
+        opacity: .55;
+    }
+
+    .cart_info table tbody td.thumb
+    {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+
+        width: 80px;
+        min-width: 80px;
+    }
+
+    .cart_info table tbody td.info
+    {
+        margin-bottom: 20px;
+        padding-right: 24px;
+    }
+
+    .cart_info table tbody td.price
+    {
+        width: 124px;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .cart_info table tbody td.status,
+    .cart_info table tbody td.minimum,
+    .cart_info table tbody td.amount,
+    .cart_info table tbody td.amount + td.price
+    {
+        width: auto;
+        min-width: 0;
+    }
+
+    .cart_info table tbody td.delete
+    {
+        position: absolute;
+        top: 4px;
+        right: 8px;
+
+        padding: 0;
+    }
+
+
+    .cart_info table tfoot tr
+    {
+        position: relative;
+
+        display: flex;
+
+        padding: 20px;
+
+        background: #f1f1f1;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .cart_info table tfoot tr + tr
+    {
+        border-top: 1px solid #dfdfdf;
+    }
+
+
+    .cart_info table tfoot td
+    {
+        display: block;
+
+        width: 100%;
+        padding: 0;
+
+        border: none;
+    }
+
+    .cart_info table tfoot td:empty
+    {
+        display: none;
+    }
+
+
+    .cart_info table tfoot td.price_text
+    {
+        width: auto;
+        margin-top: 16px;
+        margin-left: auto;
+    }
+
+    .cart_info table tfoot td.total_price
+    {
+        font-size: 20px;
+        line-height: 26px;
+
+        width: auto;
+        margin-top: 16px;
+        margin-left: 24px;
+    }
+
+
+    .cart_info table tfoot td .promocode .form
+    {
+        width: calc(100% - 280px);
+    }
+
+
+
+    /*-------------------
+        Checkout info
+    -------------------*/
+    .checkout_info .form .col
+    {
+        width: calc(50% - 20px);
+        padding: 24px 32px 12px;
+    }
+
+    .checkout_info .form .col:last-child
+    {
+        width: calc(100% - 20px);
+    }
+
+
+
+    /*-------------------
+        Products head
+    -------------------*/
+    .products_head .nice-select .list
+    {
+        right: -14px;
+        left: auto;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .swiper-button-next,
+    .products .swiper-button-prev
+    {
+        top: -64px !important;
+    }
+
+    .products .swiper-button-prev
+    {
+        right: 48px;
+    }
+
+    .products .swiper-button-next
+    {
+        right: -4px;
+    }
+
+
+
+    .products .row,
+    .content .products .row
+    {
+        --products_count: 3;
+    }
+
+    .products .row > *,
+    .content .products .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+
+
+    /*------------------
+        Compare info
+    ------------------*/
+    .compare_info aside
+    {
+        width: var(--sidebar_width);
+        margin: 0;
+    }
+
+    .compare_info .content
+    {
+        width: calc(100% - var(--sidebar_width));
+    }
+
+
+    .compare_info .compare_features .list > *
+    {
+        line-height: 20px;
+
+        min-height: 48px;
+        padding: 8px 16px;
+    }
+
+
+    .compare_info .product_features .list > *
+    {
+        line-height: 20px;
+
+        min-height: 48px;
+        padding: 8px 16px 8px 20px;
+    }
+
+
+
+    /*-------------
+        LK info
+    -------------*/
+    .lk_info .cont > .data
+    {
+        padding: 24px;
+    }
+
+    .lk_info .cont > .data .btns
+    {
+        display: flex;
+
+        width: 100%;
+        margin: 20px 0 -12px -32px;
+
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .lk_info .cont > .data .btns > *
+    {
+        margin-bottom: 12px;
+        margin-left: 32px;
+    }
+
+    .lk_info .cont > .data .btns > * + *
+    {
+        margin-top: 0;
+    }
+
+
+
+    /*------------------------
+        LK info - Personal
+    ------------------------*/
+    .lk_info .personal .form
+    {
+        width: 100%;
+    }
+
+
+
+    /*-----------------------
+        LK info - Orders
+    -----------------------*/
+    .lk_info .orders .titles
+    {
+        padding: 8px 44px 8px 20px;
+    }
+
+    .lk_info .orders .titles > * + *
+    {
+        padding-left: 24px;
+    }
+
+
+    .lk_info .orders .order .head
+    {
+        padding: 4px 43px 4px 19px;
+    }
+
+    .lk_info .orders .order .head > * + *
+    {
+        padding-left: 24px;
+    }
+
+
+    .lk_info .orders .col_date
+    {
+        width: 148px;
+    }
+
+    .lk_info .orders .col_status,
+    .lk_info .orders .col_price
+    {
+        width: 112px;
+    }
+
+
+    .lk_info .orders .cart_info table tfoot td.repeat
+    {
+        width: 164px;
+        min-width: 164px;
+        margin-left: 24px;
+        padding-right: 0;
+    }
+
+    .lk_info .orders .cart_info table tfoot td.price_text,
+    .lk_info .orders .cart_info table tfoot td.total_price
+    {
+        margin-top: 0;
+
+        align-self: center;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .add_review .form .columns > *.width1of4
+    {
+        width: calc(100% - var(--form_columns_offset));
+    }
+
+    .reviews .add_review .form .columns > *.width1of5
+    {
+        width: calc(33.333% - var(--form_columns_offset));
+    }
+
+
+
+    /*-------------
+        Gallery
+    -------------*/
+    .gallery .swiper-button-next,
+    .gallery .swiper-button-prev
+    {
+        opacity: 1;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .subscribe
+    {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+
+    footer .bottom .col_left
+    {
+        width: calc(100% - 180px);
+    }
+
+
+    footer .creator
+    {
+        line-height: 18px;
+
+        width: 100%;
+        margin: 12px 0 0;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .fancybox-slide--html
+    {
+        padding: 30px;
+    }
+}
