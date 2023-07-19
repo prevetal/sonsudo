@@ -817,6 +817,67 @@
 
 
 
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .row
+    {
+        margin-bottom: -49px;
+        margin-left: -49px;
+    }
+
+    .advantages .row > *
+    {
+        width: calc(33.333% - 49px);
+        margin-bottom: 49px;
+        margin-left: 49px;
+    }
+
+
+    .advantages .swiper
+    {
+        padding: 23px;
+    }
+
+
+    .advantages .item
+    {
+        padding: 24px 0;
+    }
+
+    .advantages .item:before
+    {
+        margin-right: 24px;
+    }
+
+    .advantages .item:after
+    {
+        width: calc(100% + 49px);
+        margin-top: 24px;
+    }
+
+
+    .advantages .item .icon
+    {
+        width: 76px;
+        height: 76px;
+        margin-bottom: 20px;
+    }
+
+
+    .advantages .item .name
+    {
+        font-size: 18px;
+    }
+
+
+    .advantages .item .desc
+    {
+        font-size: 14px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

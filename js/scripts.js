@@ -1,7 +1,7 @@
 $(() => {
 	// Основной слайдер на главной
-	if ($('.main_slider .swiper-container').length) {
-		new Swiper('.main_slider .swiper-container', {
+	if ($('.main_slider .swiper').length) {
+		new Swiper('.main_slider .swiper', {
 			loop: true,
 			speed: 750,
 			watchSlidesVisibility: true,
@@ -27,10 +27,10 @@ $(() => {
 
 
 	// Рекомендуем
-	if ($('.recommend .swiper-container').length) {
-		let slides = $('.recommend .swiper-container .slide').length
+	if ($('.recommend .swiper').length) {
+		let slides = $('.recommend .swiper .slide').length
 
-		new Swiper('.recommend .swiper-container', {
+		new Swiper('.recommend .swiper', {
 			loop: slides > 1 ? true : false,
 			speed: 500,
 			spaceBetween: 18,
@@ -73,8 +73,8 @@ $(() => {
 
 
 	// Карусель товаров
-	if ($('section.products .swiper-container').length) {
-		new Swiper('section.products .swiper-container', {
+	if ($('section.products .swiper').length) {
+		new Swiper('section.products .swiper', {
 			loop: true,
 			speed: 500,
 			watchSlidesVisibility: true,
@@ -155,8 +155,8 @@ $(() => {
 
 
 	// Сравнение товаров
-	if ($('.compare_info .products .swiper-container').length) {
-		new Swiper('.compare_info .products .swiper-container', {
+	if ($('.compare_info .products .swiper').length) {
+		new Swiper('.compare_info .products .swiper', {
 			loop: true,
 			speed: 500,
 			watchSlidesVisibility: true,
@@ -241,8 +241,8 @@ $(() => {
 
 
 	// Карусель изображений
-	if ($('.gallery .swiper-container').length) {
-		new Swiper('.gallery .swiper-container', {
+	if ($('.gallery .swiper').length) {
+		new Swiper('.gallery .swiper', {
 			loop: true,
 			speed: 500,
 			spaceBetween: 20,
@@ -286,7 +286,7 @@ $(() => {
 
 	// Страница товара
 	if ($('.product_info .images').length) {
-		const productThumbs = new Swiper('.product_info .thumbs.swiper-container', {
+		const productThumbs = new Swiper('.product_info .thumbs.swiper', {
 			loop: false,
 			watchSlidesVisibility: true,
 			slideActiveClass: 'active',
@@ -307,7 +307,7 @@ $(() => {
 			}
 		})
 
-		const productSlider = new Swiper('.product_info .big .swiper-container', {
+		const productSlider = new Swiper('.product_info .big .swiper', {
 			loop: false,
 			speed: 500,
 			watchSlidesVisibility: true,
@@ -403,6 +403,10 @@ $(window).on('load', () => {
 	$('.products .row').each(function () {
 		productHeight($(this), parseInt($(this).css('--products_count')))
 	})
+
+
+	// Преимущества
+	initAdvantagesSliders()
 })
 
 
@@ -412,6 +416,10 @@ $(window).resize(() => {
 	$('.products .row').each(function () {
 		productHeight($(this), parseInt($(this).css('--products_count')))
 	})
+
+
+	// Преимущества
+	initAdvantagesSliders()
 })
 
 
@@ -474,4 +482,50 @@ function productHeight(context, step) {
 		start = start + step
 		finish = finish + step
 	})
+}
+
+
+
+// Преимущества
+var advantagesSliders = []
+
+function initAdvantagesSliders() {
+	if ($(window).width() < 768) {
+		if ($('.advantages .row').length) {
+			$('.advantages .row > *').addClass('swiper-slide')
+			$('.advantages .row').addClass('swiper-wrapper').removeClass('row')
+
+			$('.advantages .swiper').each(function (i) {
+				$(this).addClass('advantages_s' + i)
+
+				let options = {
+					loop: false,
+					speed: 500,
+					watchSlidesProgress: true,
+					slideActiveClass: 'active',
+					slideVisibleClass: 'visible',
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+					pagination: {
+						el: '.swiper-pagination',
+						type: 'fraction'
+					},
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev'
+					},
+				}
+
+				advantagesSliders.push(new Swiper('.advantages_s' + i, options))
+			})
+		}
+	} else {
+		advantagesSliders.forEach(element => element.destroy(true, true))
+
+		advantagesSliders = []
+
+		$('.advantages .swiper-wrapper').addClass('row').removeClass('swiper-wrapper')
+		$('.advantages .row > *').removeClass('swiper-slide')
+	}
 }

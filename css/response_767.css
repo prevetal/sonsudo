@@ -398,6 +398,14 @@
         padding: 16px 0 0 0 !important;
     }
 
+    .product_info .data .sizes_table_btn
+    {
+        width: calc(100% - 40px);
+        margin-top: 12px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
     .product_info .data .size .mob_size_btn
     {
         display: block;
@@ -1027,6 +1035,82 @@
     .gallery .swiper-button-next
     {
         right: -20px;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages
+    {
+        padding-bottom: 1px;
+    }
+
+
+    .advantages .swiper
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .advantages .swiper-slide
+    {
+        position: relative;
+
+        visibility: hidden;
+
+        transition: opacity .2s linear, visibility .2s linear;
+        pointer-events: none;
+
+        opacity: 0;
+    }
+
+    .advantages .swiper-slide.visible
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .advantages .item
+    {
+        padding: 0;
+    }
+
+    .advantages .item:before,
+    .advantages .item:after
+    {
+        display: none;
+    }
+
+
+    .advantages .item .icon
+    {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 16px;
+    }
+
+
+    .advantages .item .name
+    {
+        font-size: 17px;
+    }
+
+
+    .advantages .item .desc
+    {
+        margin-top: 12px;
+    }
+
+
+    .advantages .controls
+    {
+        display: flex;
     }
 
 

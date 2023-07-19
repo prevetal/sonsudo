@@ -933,6 +933,53 @@
 
 
 
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .row
+    {
+        margin-bottom: -49px;
+        margin-left: -65px;
+    }
+
+    .advantages .row > *
+    {
+        width: calc(50% - 65px);
+        margin-bottom: 49px;
+        margin-left: 65px;
+    }
+
+
+    .advantages .item:before
+    {
+        margin-right: 32px;
+    }
+
+    .advantages .item:after,
+    .advantages .row > *:nth-child(3n) .item:after
+    {
+        width: calc(100% + 65px);
+    }
+
+
+    .advantages .row > *:nth-child(3n+1) .item:before
+    {
+        display: block;
+    }
+
+    .advantages .row > *:nth-child(2n+1) .item:before
+    {
+        display: none;
+    }
+
+
+    .advantages .row > *:nth-last-child(3) .item:after
+    {
+        display: block;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
