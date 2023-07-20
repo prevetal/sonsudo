@@ -499,7 +499,7 @@ function initAdvantagesSliders() {
 				$(this).addClass('advantages_s' + i)
 
 				let options = {
-					loop: false,
+					loop: true,
 					speed: 500,
 					watchSlidesProgress: true,
 					slideActiveClass: 'active',
@@ -507,10 +507,6 @@ function initAdvantagesSliders() {
 					slidesPerView: 1,
 					spaceBetween: 0,
 					autoHeight: true,
-					pagination: {
-						el: '.swiper-pagination',
-						type: 'fraction'
-					},
 					navigation: {
 						nextEl: '.swiper-button-next',
 						prevEl: '.swiper-button-prev'
